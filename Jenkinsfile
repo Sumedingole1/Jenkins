@@ -3,12 +3,12 @@ pipeline {
     
     tools {
         maven 'Maven 3.8.7'
-        jdk 'jdk8'
     }
 
     stages {
         stage ('Initialize') {
             steps {
+                yum install java-11-openjdk-devel -y 
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
