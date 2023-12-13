@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label "ssh-aws"
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
