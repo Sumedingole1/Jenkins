@@ -1,5 +1,5 @@
 pipeline {
-    agent ssh-aws
+    agent "ssh-aws"
 
     stages {
         stage('Build') {
