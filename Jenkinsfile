@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'pwd'
                 sh 'ls -l' 
-                sh '/var/lib/jenkins/workspace/Samle/mvn clean'
+                sh 'cd /var/lib/jenkins/workspace/Samle && mvn clean'
             }
         }
         stage('Test') {
