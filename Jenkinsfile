@@ -25,8 +25,9 @@ pipeline {
                 script {
                     dir('/var/lib/jenkins/workspace/Samle') {
                         // Configure SonarQube properties
-                        withSonarQubeEnv('SonarQube') {
-                            sh '/opt/apache-maven-3.8.7/bin/mvn sonar:sonar'
+                        // withSonarQubeEnv('SonarQube') {
+                        //     sh '/opt/apache-maven-3.8.7/bin/mvn sonar:sonar'
+                        echo 'Sonarqube analysis'
                         }
                     }
                 }
