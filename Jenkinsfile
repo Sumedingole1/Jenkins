@@ -20,7 +20,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                // Add your test steps here
+                sh '/opt/apache-maven-3.8.7/bin/mvn test'
             }
         }
         stage('Deploy') {
