@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'echo $JAVA_HOME'
+                sh '/opt/apache-maven-3.8.7/bin/mvn -v'
                 
                 script {
                     dir('/var/lib/jenkins/workspace/Samle') {
