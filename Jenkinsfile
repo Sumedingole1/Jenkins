@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 // Add your deployment steps here
-                sh 'rm -rf /var/lib/jenkins/workspace/*'
+                
             }
         }
     }
