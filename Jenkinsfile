@@ -5,14 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'pwd'
                 sh 'ls -l'
-                sh '/opt/apache-maven-3.8.7/bin/mvn -v'
-                
                 script {
                     dir('/var/lib/jenkins/workspace/Samle') {
                         sh '/opt/apache-maven-3.8.7/bin/mvn clean'
-                        sh 'ls -l'
                     }
                 }
             }
@@ -27,7 +23,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 // Add your deployment steps here
-                sh '/opt/apache-maven-3.8.7/bin/mvn deploy'
+                sh 'rm -rf /var/lib/jenkins/workspace/*'
             }
         }
     }
