@@ -19,20 +19,20 @@ pipeline {
                 sh '/opt/apache-maven-3.8.7/bin/mvn test'
             }
         }
-        stage('SonarQube Analysis') {
-            steps {
-                echo 'Running SonarQube analysis...'
-                script {
-                    dir('/var/lib/jenkins/workspace/Samle') {
-                        // Configure SonarQube properties
-                        // withSonarQubeEnv('SonarQube') {
-                        //     sh '/opt/apache-maven-3.8.7/bin/mvn sonar:sonar'
-                        echo 'Sonarqube analysis'
-                        }
-                    }
-                }
-            }
-        }
+        // stage('SonarQube Analysis') {
+        //     steps {
+        //         echo 'Running SonarQube analysis...'
+        //         script {
+        //             dir('/var/lib/jenkins/workspace/Samle') {
+        //                 // Configure SonarQube properties
+        //                 withSonarQubeEnv('SonarQube') {
+        //                     sh '/opt/apache-maven-3.8.7/bin/mvn sonar:sonar'
+        //                 echo 'Sonarqube analysis'
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
