@@ -27,6 +27,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 // Add your deployment steps here
+                sh '/opt/apache-maven-3.8.7/bin/mvn deploy'
             }
         }
     }
