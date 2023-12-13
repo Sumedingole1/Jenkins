@@ -11,7 +11,7 @@ pipeline {
                 
                 script {
                     dir('/var/lib/jenkins/workspace/Samle') {
-                        // sh '/opt/apache-maven-3.8.7/bin/mvn clean'
+                        sh '/opt/apache-maven-3.8.7/bin/mvn clean'
                         sh 'ls -l'
                     }
                 }
