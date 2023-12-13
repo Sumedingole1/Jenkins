@@ -6,18 +6,25 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'pwd'
-                sh 'ls -l' 
-                sh 'cd /var/lib/jenkins/workspace/Samle && mvn clean'
+                sh 'ls -l'
+                
+                script {
+                    dir('/var/lib/jenkins/workspace/Samle') {
+                        sh 'mvn clean'
+                    }
+                }
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                // Add your test steps here
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                // Add your deployment steps here
             }
         }
     }
